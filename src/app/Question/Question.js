@@ -72,7 +72,7 @@ export const Question = () => {
         return;
       }
     ctxData.dispatch({type:'LOADER',payload:true})
-    ServerCall.fnSendPostReq("http://localhost:2020/que/save-que",{data:dataObj})
+    ServerCall.fnSendPostReq("https://questions-server1.vercel.app//que/save-que",{data:dataObj})
     .then((res)=>
     {
       ctxData.dispatch({type:'LOADER',payload:false});
